@@ -1,0 +1,98 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+@font-face {
+  font-family: 'Poppins';
+  src: url('../fonts/poppins-medium.woff2') format('woff2');
+  font-display: swap;
+  font-weight: 500;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Inter';
+  src: url('../fonts/inter-400.woff2') format('woff2');
+  font-display: swap;
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Inter';
+  src: url('../fonts/inter-500.woff2') format('woff2');
+  font-display: swap;
+  font-weight: 500;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Inter';
+  src: url('../fonts/inter-600.woff2') format('woff2');
+  font-display: swap;
+  font-weight: 600;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Inter';
+  src: url('../fonts/inter-700.woff2') format('woff2');
+  font-display: swap;
+  font-weight: 700;
+  font-style: normal;
+}
+
+:root {
+  --text-black: rgba(18, 18, 18, 1);
+  --text-blue: rgba(62, 62, 89, 1);
+  --primary-black: rgba(0, 0, 0, 1);
+  --secondary-blue: rgba(55, 125, 255, 1);
+  --secondary-green: rgba(56, 203, 137, 1);
+  --secondary-orange: rgba(255, 171, 0, 1);
+  --secondary-red: rgba(255, 86, 48, 1);
+  --neutral-black: rgba(20, 23, 24, 1);
+  --neutral-ultra-dark-gray: rgba(35, 38, 39, 1);
+  --neutral-dark-gray: rgba(52, 56, 57, 1);
+  --neutral-gray: rgba(108, 114, 117, 1);
+  --neutral-silver: rgba(232, 236, 239, 1);
+  --neutral-light-silver: rgba(243, 245, 247, 1);
+  --neutral-white: rgba(254, 254, 254, 1);
+}
+
+html {
+  scrollbar-gutter: stable;
+}
+
+body {
+  font-family: 'Inter';
+  font-weight: 500;
+  color: var(--text-black);
+  overflow-x: hidden;
+}
+
+a {
+  text-decoration: none;
+}
+
+ul {
+  list-style: none;
+}
+
+img {
+  max-width: 100%;
+}
+
+button {
+  background: none;
+  border: none;
+  padding: 0;
+  margin: 0;
+  font: inherit;
+  color: inherit;
+  cursor: pointer;
+  text-align: inherit;
+  text-decoration: none;
+  white-space: nowrap;
+}
