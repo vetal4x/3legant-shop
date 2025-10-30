@@ -76,6 +76,8 @@ body {
 
 a {
   text-decoration: none;
+  color: var(--neutral-black);
+  cursor: pointer;
 }
 
 ul {
@@ -431,4 +433,65 @@ body.lock {
 .company-meta__details--highlight {
   color: var(--neutral-dark-gray);
   font-weight: 700;
+}
+
+/* Categories */
+
+.categories {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.categories__item {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: end;
+  gap: 30px;
+  background-color: var(--neutral-light-silver);
+  padding: 22px 17px 31px;
+}
+
+.categories__item--living-room {
+  flex-direction: column;
+    align-items: start;
+}
+
+.categories__label {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.categories__title {
+  font-family: Poppins;
+  font-size: 28px;
+  font-weight: 500;
+  line-height: 34px;
+  letter-spacing: -0.6px;
+  text-align: left;
+  color: var(--neutral-black);
+}
+
+.categories__link {
+  width: fit-content;
+  font-family: Inter;
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 24px;
+  text-align: left;
+  color: var(--neutral-black);
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  border-bottom: 1px solid var(--neutral-black);
+}
+
+.categories__image {
+  max-width: 88px;
+}
+
+.categories__image--living-room {
+  max-width: 140px;
 }
