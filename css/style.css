@@ -47,7 +47,6 @@
 :root {
   --text-black: rgba(18, 18, 18, 1);
   --text-blue: rgba(62, 62, 89, 1);
-  --text-top-bar: rgba(52, 56, 57, 1);
   --primary-black: rgba(0, 0, 0, 1);
   --secondary-blue: rgba(55, 125, 255, 1);
   --secondary-green: rgba(56, 203, 137, 1);
@@ -131,7 +130,7 @@ button {
 }
 
 .top-bar__offer--text {
-  color: var(--text-top-bar);
+  color: var(--neutral-dark-gray);
   font-family: Inter;
   font-size: 12px;
   font-weight: 600;
@@ -385,4 +384,51 @@ body.lock {
   height: 8px;
   border-radius: 100px;
   background-color: #fff;
+}
+
+/* Company Meta */
+
+.company-meta {
+  display: flex;
+  flex-direction: column;
+  gap: 19px;
+  padding: 32px 0 40px;
+}
+
+.company-meta__slogan {
+  display: flex;
+  flex-direction: column;
+}
+
+.slogan__first-line,
+.slogan__second-line,
+.slogan__first-line--accent,
+.slogan__second-line--accent {
+  font-family: Poppins;
+  font-size: 40px;
+  font-weight: 500;
+  line-height: 44px;
+  letter-spacing: -0.4px;
+  text-align: left;
+  color: var(--neutral-black);
+}
+
+.slogan__first-line--accent,
+.slogan__second-line--accent {
+  color: var(--neutral-gray);
+}
+
+.company-meta__details,
+.company-meta__details--highlight {
+  font-family: Inter;
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 22px;
+  text-align: left;
+  color: var(--neutral-gray);
+}
+
+.company-meta__details--highlight {
+  color: var(--neutral-dark-gray);
+  font-weight: 700;
 }
