@@ -42,3 +42,18 @@ document.addEventListener('click', (e) => {
     closeMenu();
   }
 });
+
+/* Glide Slider */
+
+document.addEventListener('DOMContentLoaded', () => {
+  new Glide('.glide', {
+    type: 'slider',
+    startAt: 0,
+    perView: 1,
+    autoplay: 3000,
+    hoverpause: true,
+    keyboard: true,
+    gap: 4,
+      animationDuration: 600,
+  }).mount();
+});
