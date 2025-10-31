@@ -694,3 +694,50 @@ body.lock {
   text-align: left;
   color: var(--neutral-black);
 }
+
+/* Benefits */
+
+.benefits {
+  display: grid;
+  row-gap: 24px;
+  column-gap: 8px;
+  grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+  padding: 32px 0;
+}
+
+.benefits__item {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  padding: 32px 16px;
+  background-color: var(--neutral-light-silver);
+}
+
+.benefits__image {
+  padding: 4px;
+}
+
+.benefits__info {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.benefits__title {
+  font-family: Inter;
+  font-size: 14px;
+  font-weight: 600;
+  line-height: 22px;
+  text-align: left;
+  color: var(--neutral-black);
+}
+
+.benefits__description {
+  font-family: Inter;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 22px;
+  text-align: left;
+  color: var(--neutral-gray);
+}
