@@ -507,7 +507,7 @@ body.lock {
   gap: 40px;
 }
 
-.new-arrivals__title {
+.section-title {
   font-family: Poppins;
   font-size: 34px;
   font-weight: 500;
@@ -736,11 +736,6 @@ body.lock {
   background-color: var(--neutral-light-silver);
 }
 
-.promo__image {
-  max-width: none;
-  width: 101%;
-}
-
 .promo__info {
   display: flex;
   flex-direction: column;
@@ -776,4 +771,42 @@ body.lock {
   line-height: 26px;
   text-align: left;
   color: var(--neutral-black);
+}
+
+/* Articles */
+
+.articles {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  padding: 40px 0;
+}
+
+.articles__header {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: baseline;
+  margin-bottom: 16px;
+}
+
+.articles__article {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.article__content {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.article__title {
+  font-family: Inter;
+  font-size: 16px;
+  font-weight: 600;
+  line-height: 26px;
+  text-align: left;
+  color: var(--neutral-ultra-dark-gray);
 }
