@@ -476,7 +476,7 @@ body.lock {
   color: var(--neutral-black);
 }
 
-.categories__link {
+.cta-link {
   width: fit-content;
   font-family: Inter;
   font-size: 14px;
@@ -680,21 +680,6 @@ body.lock {
   color: var(--neutral-gray);
 }
 
-.new-arrivals__more-products-link {
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  gap: 4px;
-  width: fit-content;
-  border-bottom: 1px solid var(--neutral-black);
-  font-family: Inter;
-  font-size: 14px;
-  font-weight: 500;
-  line-height: 24px;
-  text-align: left;
-  color: var(--neutral-black);
-}
-
 /* Benefits */
 
 .benefits {
@@ -740,4 +725,55 @@ body.lock {
   line-height: 22px;
   text-align: left;
   color: var(--neutral-gray);
+}
+
+/* Promo */
+
+.promo {
+  margin: 0px -32px;
+  display: flex;
+  flex-direction: column;
+  background-color: var(--neutral-light-silver);
+}
+
+.promo__image {
+  max-width: none;
+  width: 101%;
+}
+
+.promo__info {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  padding: 58px 32px;
+  width: 95%;
+}
+
+.promo__header {
+  font-family: Inter;
+  font-size: 16px;
+  font-weight: 700;
+  line-height: 16px;
+  text-align: left;
+  text-transform: uppercase;
+  color: var(--secondary-blue);
+}
+
+.promo__title {
+  font-family: Poppins;
+  font-size: 34px;
+  font-weight: 500;
+  line-height: 38px;
+  letter-spacing: -0.6px;
+  text-align: left;
+  color: var(--neutral-black);
+}
+
+.promo__description {
+  font-family: Inter;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 26px;
+  text-align: left;
+  color: var(--neutral-black);
 }
