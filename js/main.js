@@ -97,34 +97,32 @@ document.addEventListener('DOMContentLoaded', () => {
   updatePosts();
 });
 
-fetch('../blog.html')
-  .then((res) => res.text())
-  .then((html) => {
-    const doc = new DOMParser().parseFromString(html, 'text/html');
+// Recommended Article List
 
-    const recommended = [...doc.querySelectorAll('.blog-post')]
-      .filter(
-        (post) =>
-          !post
-            .querySelector('.blog-post__link')
-            .href.endsWith('article-1.html')
-      )
-      .sort(() => 0.5 - Math.random())
-      .slice(0, 3);
+const container = document.getElementById('recommendedList');
+if (container) {
+  fetch('../blog.html')
+    .then(res => res.text())
+    .then(html => {
+      const doc = new DOMParser().parseFromString(html, 'text/html');
 
-    const container = document.getElementById('recommendedList');
-    if (!container) return;
+      const recommended = [...doc.querySelectorAll('.blog-post')]
+        .filter(post => !post.querySelector('.blog-post__link').href.endsWith('article-1.html'))
+        .sort(() => 0.5 - Math.random())
+        .slice(0, 3);
 
-    recommended.forEach((post) => {
-      const clone = post.cloneNode(true);
+      recommended.forEach(post => {
+        const clone = post.cloneNode(true);
 
-      clone.querySelectorAll('img').forEach((img) => {
-        const src = img.getAttribute('src');
-        if (src && !src.startsWith('../')) {
-          img.src = '../' + src;
-        }
+        clone.querySelectorAll('img').forEach(img => {
+          const src = img.getAttribute('src');
+          if (src && !src.startsWith('../')) {
+            img.src = '../' + src;
+          }
+        });
+
+        container.appendChild(clone);
       });
-
-      container.appendChild(clone);
     });
-  });
+}
+
