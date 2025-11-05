@@ -67,7 +67,7 @@ document.addEventListener('DOMContentLoaded', () => {
 document.addEventListener("DOMContentLoaded", () => {
   const posts = document.querySelectorAll(".blog-post");
   const button = document.querySelector(".blog-posts__button");
-  const visibleCount = 6; // сколько показывать по умолчанию
+  const visibleCount = 6;
   let expanded = false;
 
   function updatePosts() {
@@ -89,7 +89,7 @@ document.addEventListener("DOMContentLoaded", () => {
   updatePosts();
 });
 
-fetch('/blog.html')
+fetch('../blog.html')
   .then(res => res.text())
   .then(html => {
     const parser = new DOMParser();
