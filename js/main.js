@@ -1,7 +1,9 @@
 /* Elements */
 
 const topbar = document.querySelector('.top-bar');
-const closeTopbarBtn = topbar ? document.querySelector('.top-bar__close-button') : null;
+const closeTopbarBtn = topbar
+  ? document.querySelector('.top-bar__close-button')
+  : null;
 const header = document.querySelector('.header');
 const hamburger = document.querySelector('.header__hamburger');
 const closeMobileBtn = document.querySelector('.mobile-menu__close-button');
@@ -20,7 +22,7 @@ const toggleMenu = () => {
 };
 
 const closeTopbar = () => {
-  if (!topbar) return; // если топбар нет, выходим
+  if (!topbar) return;
   topbar.classList.add('hidden');
   document.body.style.paddingTop = '0';
   mobileMenu.style.top = '0';
@@ -39,18 +41,23 @@ closeMobileBtn.addEventListener('click', closeMenu);
 document.addEventListener('click', (e) => {
   const clickedInsideMenu = mobileMenu.contains(e.target);
   const clickedOnHamburger = hamburger.contains(e.target);
-  const clickedOnCloseTopbar = closeTopbarBtn ? closeTopbarBtn.contains(e.target) : false;
+  const clickedOnCloseTopbar = closeTopbarBtn
+    ? closeTopbarBtn.contains(e.target)
+    : false;
 
   if (!clickedInsideMenu && !clickedOnHamburger && !clickedOnCloseTopbar) {
     closeMenu();
   }
 });
 
-
 /* Glide Slider */
 
 document.addEventListener('DOMContentLoaded', () => {
-  new Glide('.glide', {
+  const slider = document.querySelector('.glide');
+
+  if (!slider) return;
+
+  new Glide(slider, {
     type: 'slider',
     startAt: 0,
     perView: 1,
@@ -58,30 +65,31 @@ document.addEventListener('DOMContentLoaded', () => {
     hoverpause: true,
     keyboard: true,
     gap: 4,
-      animationDuration: 600,
+    animationDuration: 600,
   }).mount();
 });
 
 /* Show More Posts Button */
 
-document.addEventListener("DOMContentLoaded", () => {
-  const posts = document.querySelectorAll(".blog-post");
-  const button = document.querySelector(".blog-posts__button");
+document.addEventListener('DOMContentLoaded', () => {
+  const posts = document.querySelectorAll('.blog-post');
+  const button = document.querySelector('.blog-posts__button');
+  if (!button) return;
   const visibleCount = 6;
   let expanded = false;
 
   function updatePosts() {
     posts.forEach((post, index) => {
       if (!expanded && index >= visibleCount) {
-        post.style.display = "none";
+        post.style.display = 'none';
       } else {
-        post.style.display = "flex";
+        post.style.display = 'flex';
       }
     });
-    button.textContent = expanded ? "Show Less" : "Show More";
+    button.textContent = expanded ? 'Show Less' : 'Show More';
   }
 
-  button.addEventListener("click", () => {
+  button.addEventListener('click', () => {
     expanded = !expanded;
     updatePosts();
   });
@@ -90,18 +98,33 @@ document.addEventListener("DOMContentLoaded", () => {
 });
 
 fetch('../blog.html')
-  .then(res => res.text())
-  .then(html => {
-    const parser = new DOMParser();
-    const doc = parser.parseFromString(html, 'text/html');
+  .then((res) => res.text())
+  .then((html) => {
+    const doc = new DOMParser().parseFromString(html, 'text/html');
 
-    const allPosts = [...doc.querySelectorAll('.blog-post')];
-    const recommended = allPosts
-      .filter(post => !post.querySelector('.blog-post__link').href.endsWith('article-1.html'))
+    const recommended = [...doc.querySelectorAll('.blog-post')]
+      .filter(
+        (post) =>
+          !post
+            .querySelector('.blog-post__link')
+            .href.endsWith('article-1.html')
+      )
       .sort(() => 0.5 - Math.random())
       .slice(0, 3);
 
     const container = document.getElementById('recommendedList');
-    recommended.forEach(post => container.appendChild(post.cloneNode(true)));
-  });
+    if (!container) return;
 
+    recommended.forEach((post) => {
+      const clone = post.cloneNode(true);
+
+      clone.querySelectorAll('img').forEach((img) => {
+        const src = img.getAttribute('src');
+        if (src && !src.startsWith('../')) {
+          img.src = '../' + src;
+        }
+      });
+
+      container.appendChild(clone);
+    });
+  });
