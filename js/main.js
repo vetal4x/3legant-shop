@@ -86,6 +86,22 @@ document.addEventListener("DOMContentLoaded", () => {
     updatePosts();
   });
 
-  updatePosts(); // начальное состояние
+  updatePosts();
 });
+
+fetch('/blog.html')
+  .then(res => res.text())
+  .then(html => {
+    const parser = new DOMParser();
+    const doc = parser.parseFromString(html, 'text/html');
+
+    const allPosts = [...doc.querySelectorAll('.blog-post')];
+    const recommended = allPosts
+      .filter(post => !post.querySelector('.blog-post__link').href.endsWith('article-1.html'))
+      .sort(() => 0.5 - Math.random())
+      .slice(0, 3);
+
+    const container = document.getElementById('recommendedList');
+    recommended.forEach(post => container.appendChild(post.cloneNode(true)));
+  });
 
