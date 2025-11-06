@@ -1015,10 +1015,13 @@ body.blog-page {
   align-items: center;
   gap: 16px;
   padding: 92px 24px;
-  background-image: url(../images/blog-page-header-background.webp);
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center center;
+}
+
+.page-header--blog {
+  background-image: url(../images/blog-page-header-background.webp);
 }
 
 .page-header__breadcrumbs {
@@ -1071,11 +1074,20 @@ body.blog-page {
 /* Blog Filter */
 
 .blog-filter {
-  position: relative;
   padding: 32px 0;
 }
 
-.blog-filter__select {
+/* Flow Dropdown Filter  */
+
+.flow-dropdown-filter {
+  width: 100%;
+}
+
+.filter-button {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
   width: 100%;
   padding: 8px 16px;
   border: 2px solid var(--neutral-gray);
@@ -1086,24 +1098,53 @@ body.blog-page {
   font-weight: 600;
   line-height: 26px;
   color: var(--neutral-black);
-  appearance: none;
-  background-image: url("data:image/svg+xml,%3Csvg width='12' height='8' viewBox='0 0 12 8' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M1 1L6 6L11 1' stroke='%236C7275' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E");
   background-repeat: no-repeat;
   background-position: right 16px center;
   background-size: 12px 8px;
 }
 
-.blog-filter__select:focus {
-  border: 2px solid var(--neutral-dark-gray);
-  outline: none;
+.filter-button svg {
+  transition: transform 0.3s ease;
+  display: inline-block;
 }
 
-.blog-filter__select option {
+.flow-dropdown-filter.open .filter-button svg {
+  transform: scaleY(-1);
+}
+
+.filter-options {
+  max-height: 0;
+  overflow: hidden;
+  border: 1.5px solid var(--neutral-light-silver);
+  border-radius: 12px;
+  box-shadow: 0px 64px 64px -48px rgba(15, 15, 15, 0.1);
+  opacity: 0;
+  transition: max-height 0.5s ease, padding 0.5s ease, opacity 0.5s ease;
+}
+
+.flow-dropdown-filter.open .filter-options {
+  max-height: 320px;
+  padding: 8px 0;
+  opacity: 1;
+}
+
+.filter-option {
   font-family: Inter;
   font-size: 16px;
-  font-weight: 600;
+  font-weight: 400;
   line-height: 26px;
+  color: var(--neutral-gray);
+  padding: 8px 16px;
+  cursor: pointer;
+}
+
+.filter-option.selected {
   color: var(--neutral-black);
+  font-weight: 600;
+}
+
+.filter-option:hover {
+  background-color: #f0f0f0;
 }
 
 /* Blog Posts */
@@ -1251,7 +1292,7 @@ body.article-page {
   display: flex;
   flex-direction: column;
   gap: 16px;
-    margin: 0px 32px;
+  margin: 0px 32px;
 }
 
 .article__image {
@@ -1307,3 +1348,5 @@ body.article-page {
   flex-direction: column;
   gap: 24px;
 }
+
+
