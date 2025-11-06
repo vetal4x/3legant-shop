@@ -1189,7 +1189,8 @@ body.article-page {
   font-weight: 500;
   line-height: 24px;
   color: var(--text-black);
-  padding: 16px 0 48px;
+  width: fit-content;
+  margin-top: 16px;
 }
 
 .article {
@@ -1202,7 +1203,7 @@ body.article-page {
   display: flex;
   flex-direction: column;
   gap: 24px;
-  padding-bottom: 32px;
+  padding: 48px 0 32px;
   margin: 0px 32px;
 }
 
@@ -1256,7 +1257,7 @@ body.article-page {
 .article__image {
   width: 100%;
   height: auto;
-  aspect-ratio: 311 / 407;
+  aspect-ratio: 3 / 4;
   object-fit: cover;
 }
 
