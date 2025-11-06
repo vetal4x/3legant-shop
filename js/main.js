@@ -69,6 +69,38 @@ document.addEventListener('DOMContentLoaded', () => {
   }).mount();
 });
 
+/* Flow Dropdown Filter */
+
+document.querySelectorAll('.flow-dropdown-filter').forEach((filter) => {
+  const button = filter.querySelector('.filter-button');
+  const title = filter.querySelector('.filter-title');
+  const options = filter.querySelectorAll('.filter-option');
+
+  const selected = filter.querySelector('.filter-option.selected');
+  if (selected) {
+    title.textContent = selected.textContent;
+  } else {
+    options[0].classList.add('selected');
+    title.textContent = options[0].textContent;
+  }
+
+  button.addEventListener('click', (e) => {
+    e.stopPropagation();
+    filter.classList.toggle('open');
+  });
+
+  options.forEach((option) => {
+    option.addEventListener('click', () => {
+      title.textContent = option.textContent;
+
+      options.forEach((o) => o.classList.remove('selected'));
+      option.classList.add('selected');
+
+      filter.classList.remove('open');
+    });
+  });
+});
+
 /* Show More Posts Button */
 
 document.addEventListener('DOMContentLoaded', () => {
@@ -103,12 +135,13 @@ const container = document.getElementById('recommendedList');
 
 if (container) {
   // Define the site root
-  const siteRoot = window.location.origin + window.location.pathname.split('/blog/')[0];
+  const siteRoot =
+    window.location.origin + window.location.pathname.split('/blog/')[0];
 
   // Load the main blog page
   fetch(siteRoot + '/blog.html')
-    .then(response => response.text())
-    .then(html => {
+    .then((response) => response.text())
+    .then((html) => {
       const parser = new DOMParser();
       const doc = parser.parseFromString(html, 'text/html');
 
@@ -116,19 +149,21 @@ if (container) {
       const currentPage = window.location.pathname.split('/').pop();
 
       // Filter out the current article and shuffle the rest
-      const otherPosts = Array.from(posts).filter(post => {
+      const otherPosts = Array.from(posts).filter((post) => {
         const link = post.querySelector('.blog-post__link');
         return link && !link.href.endsWith(currentPage);
       });
 
-      const randomPosts = otherPosts.sort(() => Math.random() - 0.5).slice(0, 3);
+      const randomPosts = otherPosts
+        .sort(() => Math.random() - 0.5)
+        .slice(0, 3);
 
       // Add 3 random posts to the container
-      randomPosts.forEach(post => {
+      randomPosts.forEach((post) => {
         const clone = post.cloneNode(true);
 
         // Fix links
-        clone.querySelectorAll('a').forEach(a => {
+        clone.querySelectorAll('a').forEach((a) => {
           let href = a.getAttribute('href');
           if (href && !href.startsWith('http')) {
             if (href.startsWith('/')) href = href.slice(1);
@@ -137,7 +172,7 @@ if (container) {
         });
 
         // Fix image paths
-        clone.querySelectorAll('img').forEach(img => {
+        clone.querySelectorAll('img').forEach((img) => {
           let src = img.getAttribute('src');
           if (src && !src.startsWith('http')) {
             if (src.startsWith('/')) src = src.slice(1);
@@ -148,8 +183,5 @@ if (container) {
         container.appendChild(clone);
       });
     })
-    .catch(err => console.error('Error loading recommended posts:', err));
+    .catch((err) => console.error('Error loading recommended posts:', err));
 }
-
-
-

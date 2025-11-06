@@ -380,18 +380,32 @@
 
       <!-- Blog Filter -->
 
-      <div class="blog-filter">
-        <select id="blog-category" class="blog-filter__select">
-          <option value="all" selected>All Blog</option>
-
-          <option value="features">Featured</option>
-
-          <option value="home-decor">Home Decor</option>
-
-          <option value="interior-design">Interior Design</option>
-
-          <option value="tips-inspiration">Tips & Inspiration</option>
-        </select>
+      <div class="blog-filter flow-dropdown-filter">
+        <button class="blog-filter__button filter-button">
+          <span class="blog-filter__title filter-title">All Blog</span>
+          <svg
+            width="12"
+            height="8"
+            viewBox="0 0 12 8"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              d="M1 1L6 6L11 1"
+              stroke="#6C7275"
+              stroke-width="2"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            />
+          </svg>
+        </button>
+        <ul class="blog-filter__options filter-options">
+          <li class="blog-filter__option filter-option">All Blog</li>
+          <li class="blog-filter__option filter-option">Featured</li>
+          <li class="blog-filter__option filter-option">Home Decor</li>
+          <li class="blog-filter__option filter-option">Interior Design</li>
+          <li class="blog-filter__option filter-option">Tips & Inspiration</li>
+        </ul>
       </div>
 
       <!-- Blog Posts -->
