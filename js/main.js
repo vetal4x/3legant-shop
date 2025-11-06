@@ -97,32 +97,59 @@ document.addEventListener('DOMContentLoaded', () => {
   updatePosts();
 });
 
-// Recommended Article List
+/* Recommended Articles List */
 
 const container = document.getElementById('recommendedList');
+
 if (container) {
-  fetch('../blog.html')
-    .then(res => res.text())
+  // Define the site root
+  const siteRoot = window.location.origin + window.location.pathname.split('/blog/')[0];
+
+  // Load the main blog page
+  fetch(siteRoot + '/blog.html')
+    .then(response => response.text())
     .then(html => {
-      const doc = new DOMParser().parseFromString(html, 'text/html');
+      const parser = new DOMParser();
+      const doc = parser.parseFromString(html, 'text/html');
 
-      const recommended = [...doc.querySelectorAll('.blog-post')]
-        .filter(post => !post.querySelector('.blog-post__link').href.endsWith('article-1.html'))
-        .sort(() => 0.5 - Math.random())
-        .slice(0, 3);
+      const posts = doc.querySelectorAll('.blog-post');
+      const currentPage = window.location.pathname.split('/').pop();
 
-      recommended.forEach(post => {
+      // Filter out the current article and shuffle the rest
+      const otherPosts = Array.from(posts).filter(post => {
+        const link = post.querySelector('.blog-post__link');
+        return link && !link.href.endsWith(currentPage);
+      });
+
+      const randomPosts = otherPosts.sort(() => Math.random() - 0.5).slice(0, 3);
+
+      // Add 3 random posts to the container
+      randomPosts.forEach(post => {
         const clone = post.cloneNode(true);
 
+        // Fix links
+        clone.querySelectorAll('a').forEach(a => {
+          let href = a.getAttribute('href');
+          if (href && !href.startsWith('http')) {
+            if (href.startsWith('/')) href = href.slice(1);
+            a.href = siteRoot + '/' + href;
+          }
+        });
+
+        // Fix image paths
         clone.querySelectorAll('img').forEach(img => {
-          const src = img.getAttribute('src');
-          if (src && !src.startsWith('../')) {
-            img.src = '../' + src;
+          let src = img.getAttribute('src');
+          if (src && !src.startsWith('http')) {
+            if (src.startsWith('/')) src = src.slice(1);
+            img.src = siteRoot + '/' + src;
           }
         });
 
         container.appendChild(clone);
       });
-    });
+    })
+    .catch(err => console.error('Error loading recommended posts:', err));
 }
+
+
 
