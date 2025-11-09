@@ -1399,7 +1399,7 @@ body.article-page {
 
 .products__grid.two-per-row .product-card__button {
   position: absolute;
-  bottom: 92px;
+  top: 154px;
   left: 12px;
   right: 12px;
 }
