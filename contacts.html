@@ -1,0 +1,923 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>3legant Shop | Contact Us</title>
+    <link rel="icon" href="images/favicon.svg" />
+    <link rel="stylesheet" href="css/style.css" />
+    <script src="js/main.js" defer></script>
+  </head>
+
+  <body class="contacts-page">
+    <!-- Header  -->
+
+    <header class="header">
+      <div class="header__left">
+        <button class="header__hamburger" aria-label="Toggle menu">
+          <span
+            class="header__hamburger-line header__hamburger-line--top"
+          ></span>
+          <span
+            class="header__hamburger-line header__hamburger-line--middle"
+          ></span>
+          <span
+            class="header__hamburger-line header__hamburger-line--bottom"
+          ></span>
+        </button>
+        <a href="index.html" class="header__logo">
+          <span class="logo">3legant<span class="logo__dot">.</span></span>
+        </a>
+      </div>
+      <div class="header__right">
+        <a href="/cart" class="header__cart">
+          <svg
+            viewBox="0 0 24 24"
+            xmlns="http://www.w3.org/2000/svg"
+            xmlns:xlink="http://www.w3.org/1999/xlink"
+            width="24.000000"
+            height="24.000000"
+            fill="none"
+          >
+            <rect
+              id="outline/shopping bag"
+              width="24.000000"
+              height="24.000000"
+              x="0.000000"
+              y="0.000000"
+            />
+            <path
+              id="Rectangle 773"
+              d="M15 6L15 7C15 8.65685 13.6569 10 12 10C10.3431 10 9 8.65685 9 7L9 6"
+              stroke="rgb(20,23,24)"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke-width="1.5"
+            />
+            <path
+              id="Rectangle 772"
+              d="M15.6116 3C17.5669 3 19.2357 4.41365 19.5572 6.3424L21.2238 16.3424C21.6302 18.7805 19.75 21 17.2783 21L6.72194 21C4.25018 21 2.37001 18.7805 2.77636 16.3424L4.44303 6.3424C4.76449 4.41365 6.43325 3 8.3886 3L15.6116 3Z"
+              fill-rule="evenodd"
+              stroke="rgb(20,23,24)"
+              stroke-linejoin="round"
+              stroke-width="1.5"
+            />
+          </svg>
+        </a>
+      </div>
+      <div class="header__mobile-menu">
+        <div class="mobile-menu__top">
+          <div class="mobile-menu__topline">
+            <a href="index.html" class="mobile-menu__logo">
+              <span class="logo">3legant<span class="logo__dot">.</span></span>
+            </a>
+            <button class="mobile-menu__close-button">
+              <svg
+                class="mobile-menu__close-icon"
+                fill="#343839"
+                height="14px"
+                width="14px"
+                version="1.1"
+                id="Capa_1"
+                xmlns="http://www.w3.org/2000/svg"
+                xmlns:xlink="http://www.w3.org/1999/xlink"
+                viewBox="0 0 460.775 460.775"
+                xml:space="preserve"
+                stroke="#343839"
+              >
+                <path
+                  d="M285.08,230.397L456.218,59.27c6.076-6.077,6.076-15.911,0-21.986L423.511,4.565c-2.913-2.911-6.866-4.55-10.992-4.55 c-4.127,0-8.08,1.639-10.993,4.55l-171.138,171.14L59.25,4.565c-2.913-2.911-6.866-4.55-10.993-4.55 c-4.126,0-8.08,1.639-10.992,4.55L4.558,37.284c-6.077,6.075-6.077,15.909,0,21.986l171.138,171.128L4.575,401.505 c-6.074,6.077-6.074,15.911,0,21.986l32.709,32.719c2.911,2.911,6.865,4.55,10.992,4.55c4.127,0,8.08-1.639,10.994-4.55 l171.117-171.12l171.118,171.12c2.913,2.911,6.866,4.55,10.993,4.55c4.128,0,8.081-1.639,10.992-4.55l32.709-32.719 c6.074-6.075,6.074-15.909,0-21.986L285.08,230.397z"
+                ></path>
+              </svg>
+            </button>
+          </div>
+          <form class="mobile-menu__search-form" action="/search" method="get">
+            <div class="search-wrapper">
+              <svg
+                class="search-form__icon"
+                viewBox="0 0 21.5031 21.5031"
+                xmlns="http://www.w3.org/2000/svg"
+                xmlns:xlink="http://www.w3.org/1999/xlink"
+                width="21.503052"
+                height="21.503052"
+                fill="none"
+              >
+                <path
+                  id="Vector"
+                  d="M10.25 0.75C5.00329 0.75 0.75 5.00329 0.75 10.25C0.75 15.4967 5.00329 19.75 10.25 19.75C15.4967 19.75 19.75 15.4967 19.75 10.25C19.75 5.00329 15.4967 0.75 10.25 0.75ZM17.25 17.25L20.75 20.75"
+                  fill-rule="evenodd"
+                  stroke="rgb(20,23,24)"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="1.5"
+                />
+              </svg>
+              <input
+                type="text"
+                name="q"
+                class="search-input"
+                placeholder="Search"
+              />
+            </div>
+          </form>
+          <nav class="mobile-menu__nav">
+            <ul class="mobile-menu__navigation">
+              <li>
+                <a href="index.html" class="mobile-menu__navigation-link"
+                  >Home</a
+                >
+              </li>
+              <li>
+                <a href="shop.html" class="mobile-menu__navigation-link"
+                  >Shop</a
+                >
+              </li>
+              <li>
+                <a href="#" class="mobile-menu__navigation-link">Product</a>
+              </li>
+              <li>
+                <a href="contacts.html" class="mobile-menu__navigation-link">Contact Us</a>
+              </li>
+            </ul>
+          </nav>
+        </div>
+        <div class="mobile-menu__bottom">
+          <ul class="mobile-menu__bottom-actions">
+            <li class="mobile-menu__bottom-item">
+              <span class="mobile-menu__bottom-item-name">Cart</span>
+              <button class="mobile-menu__bottom-item-button" aria-label="Cart">
+                <svg
+                  viewBox="0 0 24 24"
+                  xmlns="http://www.w3.org/2000/svg"
+                  xmlns:xlink="http://www.w3.org/1999/xlink"
+                  width="24.000000"
+                  height="24.000000"
+                  fill="none"
+                >
+                  <rect
+                    id="outline/shopping bag"
+                    width="24.000000"
+                    height="24.000000"
+                    x="0.000000"
+                    y="0.000000"
+                  />
+                  <path
+                    id="Rectangle 773"
+                    d="M15 6L15 7C15 8.65685 13.6569 10 12 10C10.3431 10 9 8.65685 9 7L9 6"
+                    stroke="rgb(20,23,24)"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="1.5"
+                  />
+                  <path
+                    id="Rectangle 772"
+                    d="M15.6116 3C17.5669 3 19.2357 4.41365 19.5572 6.3424L21.2238 16.3424C21.6302 18.7805 19.75 21 17.2783 21L6.72194 21C4.25018 21 2.37001 18.7805 2.77636 16.3424L4.44303 6.3424C4.76449 4.41365 6.43325 3 8.3886 3L15.6116 3Z"
+                    fill-rule="evenodd"
+                    stroke="rgb(20,23,24)"
+                    stroke-linejoin="round"
+                    stroke-width="1.5"
+                  />
+                </svg>
+              </button>
+            </li>
+
+            <li class="mobile-menu__bottom-item">
+              <span class="mobile-menu__bottom-item-name">Wishlist</span>
+              <button
+                class="mobile-menu__bottom-item-button"
+                aria-label="Wishlist"
+              >
+                <svg
+                  viewBox="0 0 24 24"
+                  xmlns="http://www.w3.org/2000/svg"
+                  xmlns:xlink="http://www.w3.org/1999/xlink"
+                  width="24.000000"
+                  height="24.000000"
+                  fill="none"
+                >
+                  <rect
+                    id="icons/Heart/Line"
+                    width="24.000000"
+                    height="24.000000"
+                    x="0.000000"
+                    y="0.000000"
+                  />
+                  <path
+                    id="Shape"
+                    d="M12.6924 6.91706C12.3055 7.28838 11.6945 7.28838 11.3076 6.91706L10.6152 6.2526C9.80477 5.47487 8.70994 5 7.5 5C5.01472 5 3 7.01472 3 9.5C3 11.8826 4.28979 13.8501 6.15176 15.4666C8.01532 17.0844 10.2434 18.1574 11.5746 18.7051C11.853 18.8196 12.147 18.8196 12.4254 18.7051C13.7566 18.1574 15.9847 17.0844 17.8482 15.4666C19.7102 13.85 21 11.8826 21 9.5C21 7.01472 18.9853 5 16.5 5C15.2901 5 14.1952 5.47487 13.3848 6.2526L12.6924 6.91706ZM12 4.80957C10.8321 3.6888 9.24649 3 7.5 3C3.91015 3 1 5.91015 1 9.5C1 15.8683 7.97034 19.385 10.8138 20.5547C11.5796 20.8697 12.4204 20.8697 13.1862 20.5547C16.0297 19.385 23 15.8682 23 9.5C23 5.91015 20.0899 3 16.5 3C14.7535 3 13.1679 3.6888 12 4.80957Z"
+                    fill="rgb(20,23,24)"
+                    fill-rule="evenodd"
+                  />
+                </svg>
+              </button>
+            </li>
+          </ul>
+          <button class="mobile-menu__sign-in-button">Sign In</button>
+          <div class="mobile-menu__social-icons">
+            <button class="social-icons__button">
+              <a
+                href="https://www.instagram.com/"
+                target="_blank"
+                class="social-icons__link"
+              >
+                <svg
+                  viewBox="0 0 24 24"
+                  xmlns="http://www.w3.org/2000/svg"
+                  xmlns:xlink="http://www.w3.org/1999/xlink"
+                  width="24.000000"
+                  height="24.000000"
+                  fill="none"
+                >
+                  <rect
+                    id="social/outline/instagram"
+                    width="24.000000"
+                    height="24.000000"
+                    x="0.000000"
+                    y="0.000000"
+                    fill="rgb(255,255,255)"
+                    fill-opacity="0"
+                  />
+                  <rect
+                    id="Vector"
+                    width="20.000000"
+                    height="20.000000"
+                    x="2.000000"
+                    y="2.000000"
+                    rx="4.000000"
+                    stroke="rgb(20,23,24)"
+                    stroke-width="1.5"
+                  />
+                  <circle
+                    id="Vector"
+                    cx="18"
+                    cy="6"
+                    r="1"
+                    fill="rgb(20,23,24)"
+                  />
+                  <circle
+                    id="Vector"
+                    cx="12"
+                    cy="12"
+                    r="5"
+                    stroke="rgb(20,23,24)"
+                    stroke-width="1.5"
+                  />
+                </svg>
+              </a>
+            </button>
+            <button class="social-icons__button">
+              <a
+                href="https://www.facebook.com//"
+                target="_blank"
+                class="social-icons__link"
+              >
+                <svg
+                  viewBox="0 0 24 24"
+                  xmlns="http://www.w3.org/2000/svg"
+                  xmlns:xlink="http://www.w3.org/1999/xlink"
+                  width="24.000000"
+                  height="24.000000"
+                  fill="none"
+                >
+                  <rect
+                    id="social/outline/facebook"
+                    width="24.000000"
+                    height="24.000000"
+                    x="0.000000"
+                    y="0.000000"
+                  />
+                  <path
+                    id="Vector 2998"
+                    d="M18 3L18 7L15 7C14.4477 7 14 7.44772 14 8L14 10L18 10L18 14L14 14L14 21L10 21L10 14L6 14L6 10L10 10L10 8C10 5.23858 12.2386 3 15 3L18 3Z"
+                    stroke="rgb(20,23,24)"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="1.5"
+                  />
+                </svg>
+              </a>
+            </button>
+            <button class="social-icons__button">
+              <a
+                href="https://www.youtube.com/"
+                target="_blank"
+                class="social-icons__link"
+              >
+                <svg
+                  viewBox="0 0 24 24"
+                  xmlns="http://www.w3.org/2000/svg"
+                  xmlns:xlink="http://www.w3.org/1999/xlink"
+                  width="24.000000"
+                  height="24.000000"
+                  fill="none"
+                >
+                  <rect
+                    id="social/outline/youtube"
+                    width="24.000000"
+                    height="24.000000"
+                    x="0.000000"
+                    y="0.000000"
+                  />
+                  <rect
+                    id="Rectangle 1083"
+                    width="20.000000"
+                    height="18.000000"
+                    x="2.000000"
+                    y="3.000000"
+                    rx="4.000000"
+                    stroke="rgb(20,23,24)"
+                    stroke-width="1.5"
+                  />
+                  <path
+                    id="Vector 2900"
+                    d="M10.4472 8.72361C9.78231 8.39116 9 8.87465 9 9.61803L9 14.382C9 15.1253 9.78231 15.6088 10.4472 15.2764L15.2111 12.8944C15.9482 12.5259 15.9482 11.4741 15.2111 11.1056L10.4472 8.72361Z"
+                    stroke="rgb(20,23,24)"
+                    stroke-linecap="round"
+                    stroke-width="1.5"
+                  />
+                </svg>
+              </a>
+            </button>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <!-- Main -->
+
+    <main class="main">
+      <!-- Breadcrumbs -->
+
+      <nav class="page-header__breadcrumbs">
+        <a href="index.html" class="breadcrumbs__link">Home</a>
+        <div class="breadcrumbs__separator">
+          <svg
+            fill="rgba(52, 56, 57, 1)"
+            height="10px"
+            width="10px"
+            version="1.1"
+            id="Layer_1"
+            xmlns="http://www.w3.org/2000/svg"
+            xmlns:xlink="http://www.w3.org/1999/xlink"
+            viewBox="0 0 512 512"
+            xml:space="preserve"
+            stroke="rgba(52, 56, 57, 1)"
+          >
+            <g id="SVGRepo_iconCarrier">
+              <g>
+                <g>
+                  <path
+                    d="M388.418,240.915L153.752,6.248c-8.331-8.331-21.839-8.331-30.17,0c-8.331,8.331-8.331,21.839,0,30.17L343.163,256 L123.582,475.582c-8.331,8.331-8.331,21.839,0,30.17c8.331,8.331,21.839,8.331,30.17,0l234.667-234.667 C396.749,262.754,396.749,249.246,388.418,240.915z"
+                  ></path>
+                </g>
+              </g>
+            </g>
+          </svg>
+        </div>
+        <a href="contacts.html" class="breadcrumbs__current">Contact Us</a>
+      </nav>
+
+      <!-- About Us -->
+
+      <section class="about-us">
+        <div class="about-us__block about-us__block--philosophy">
+          <h1 class="about-us__title">
+            We believe in sustainable decor. We’re passionate about life at
+            home.
+          </h1>
+          <p class="about-us__text">
+            Our features timeless furniture, with natural fabrics, curved lines,
+            plenty of mirrors and classic design, which can be incorporated into
+            any decor project. The pieces enchant for their sobriety, to last
+            for generations, faithful to the shapes of each period, with a touch
+            of the present
+          </p>
+        </div>
+        <img src="images/about-us-image.webp" alt="" class="about-us__image" />
+        <div class="about-us__block about-us__block--company">
+          <h2 class="about-us__company-title">About Us</h2>
+          <p class="about-us__company-text">
+            3legant is a gift & decorations store based in HCMC, Vietnam. Est
+            since 2019. Our customer service is always prepared to support you
+            24/7
+          </p>
+          <a href="shop.html" class="cta-link about-us__shop-link"
+            >Shop Now
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="20"
+              height="20"
+              fill="currentColor"
+              viewBox="0 0 16 16"
+            >
+              <path
+                fill-rule="evenodd"
+                d="M4 8a.5.5 0 0 1 .5-.5h5.793L8.146 5.354a.5.5 0 1 1 .708-.708l3 3a.5.5 0 0 1 0 .708l-3 3a.5.5 0 0 1-.708-.708L10.293 8.5H4.5A.5.5 0 0 1 4 8"
+              /></svg
+          ></a>
+        </div>
+      </section>
+
+      <section class="contact-us">
+        <h2 class="contact-us__title">Contact Us</h2>
+        <div class="contact-us__blocks">
+          <div class="contact-us__block">
+            <div class="contact-us__icon">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="24"
+                height="24"
+                fill="currentColor"
+                viewBox="0 0 16 16"
+              >
+                <path
+                  d="M2.97 1.35A1 1 0 0 1 3.73 1h8.54a1 1 0 0 1 .76.35l2.609 3.044A1.5 1.5 0 0 1 16 5.37v.255a2.375 2.375 0 0 1-4.25 1.458A2.37 2.37 0 0 1 9.875 8 2.37 2.37 0 0 1 8 7.083 2.37 2.37 0 0 1 6.125 8a2.37 2.37 0 0 1-1.875-.917A2.375 2.375 0 0 1 0 5.625V5.37a1.5 1.5 0 0 1 .361-.976zm1.78 4.275a1.375 1.375 0 0 0 2.75 0 .5.5 0 0 1 1 0 1.375 1.375 0 0 0 2.75 0 .5.5 0 0 1 1 0 1.375 1.375 0 1 0 2.75 0V5.37a.5.5 0 0 0-.12-.325L12.27 2H3.73L1.12 5.045A.5.5 0 0 0 1 5.37v.255a1.375 1.375 0 0 0 2.75 0 .5.5 0 0 1 1 0M1.5 8.5A.5.5 0 0 1 2 9v6h1v-5a1 1 0 0 1 1-1h3a1 1 0 0 1 1 1v5h6V9a.5.5 0 0 1 1 0v6h.5a.5.5 0 0 1 0 1H.5a.5.5 0 0 1 0-1H1V9a.5.5 0 0 1 .5-.5M4 15h3v-5H4zm5-5a1 1 0 0 1 1-1h2a1 1 0 0 1 1 1v3a1 1 0 0 1-1 1h-2a1 1 0 0 1-1-1zm3 0h-2v3h2z"
+                />
+              </svg>
+            </div>
+            <span class="contact-us__block-label">Address</span>
+            <a
+              class="contact-us__link"
+              href="https://maps.app.goo.gl/vNTi26roBtXTRZYx9"
+              target="_blank"
+              rel="noopener"
+            >
+              234 Hai Trieu, Ho Chi Minh City, Viet Nam
+            </a>
+          </div>
+          <div class="contact-us__block">
+            <div class="contact-us__icon">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="24"
+                height="24"
+                fill="currentColor"
+                viewBox="0 0 16 16"
+              >
+                <path
+                  d="M3.654 1.328a.678.678 0 0 0-1.015-.063L1.605 2.3c-.483.484-.661 1.169-.45 1.77a17.6 17.6 0 0 0 4.168 6.608 17.6 17.6 0 0 0 6.608 4.168c.601.211 1.286.033 1.77-.45l1.034-1.034a.678.678 0 0 0-.063-1.015l-2.307-1.794a.68.68 0 0 0-.58-.122l-2.19.547a1.75 1.75 0 0 1-1.657-.459L5.482 8.062a1.75 1.75 0 0 1-.46-1.657l.548-2.19a.68.68 0 0 0-.122-.58zM1.884.511a1.745 1.745 0 0 1 2.612.163L6.29 2.98c.329.423.445.974.315 1.494l-.547 2.19a.68.68 0 0 0 .178.643l2.457 2.457a.68.68 0 0 0 .644.178l2.189-.547a1.75 1.75 0 0 1 1.494.315l2.306 1.794c.829.645.905 1.87.163 2.611l-1.034 1.034c-.74.74-1.846 1.065-2.877.702a18.6 18.6 0 0 1-7.01-4.42 18.6 18.6 0 0 1-4.42-7.009c-.362-1.03-.037-2.137.703-2.877z"
+                />
+              </svg>
+            </div>
+            <span class="contact-us__block-label">Contact Us</span>
+            <a
+              class="contact-us__link"
+              href="tel:+84234567890
+"
+              target="_blank"
+              rel="noopener"
+            >
+              +84 234 567 890
+            </a>
+          </div>
+          <div class="contact-us__block">
+            <div class="contact-us__icon">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="24"
+                height="24"
+                fill="currentColor"
+                viewBox="0 0 16 16"
+              >
+                <path
+                  d="M0 4a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v8a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2zm2-1a1 1 0 0 0-1 1v.217l7 4.2 7-4.2V4a1 1 0 0 0-1-1zm13 2.383-4.708 2.825L15 11.105zm-.034 6.876-5.64-3.471L8 9.583l-1.326-.795-5.64 3.47A1 1 0 0 0 2 13h12a1 1 0 0 0 .966-.741M1 11.105l4.708-2.897L1 5.383z"
+                />
+              </svg>
+            </div>
+            <span class="contact-us__block-label">Email</span>
+            <a
+              class="contact-us__link"
+              href="mailto:hello@3legant.com
+"
+              target="_blank"
+              rel="noopener"
+            >
+              hello@3legant.com
+            </a>
+          </div>
+        </div>
+        <div class="contact-us__map">
+          <a
+            class="contact-us__map-link"
+            href="https://maps.app.goo.gl/vNTi26roBtXTRZYx9"
+            target="_blank"
+            rel="noopener"
+          >
+            <img
+              src="images/about-us-map.webp"
+              alt=""
+              class="contact-us__map-image"
+            />
+            <div class="contact-us__map-icon">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="24"
+                height="24"
+                fill="currentColor"
+                viewBox="0 0 16 16"
+              >
+                <path
+                  d="M2.97 1.35A1 1 0 0 1 3.73 1h8.54a1 1 0 0 1 .76.35l2.609 3.044A1.5 1.5 0 0 1 16 5.37v.255a2.375 2.375 0 0 1-4.25 1.458A2.37 2.37 0 0 1 9.875 8 2.37 2.37 0 0 1 8 7.083 2.37 2.37 0 0 1 6.125 8a2.37 2.37 0 0 1-1.875-.917A2.375 2.375 0 0 1 0 5.625V5.37a1.5 1.5 0 0 1 .361-.976zm1.78 4.275a1.375 1.375 0 0 0 2.75 0 .5.5 0 0 1 1 0 1.375 1.375 0 0 0 2.75 0 .5.5 0 0 1 1 0 1.375 1.375 0 1 0 2.75 0V5.37a.5.5 0 0 0-.12-.325L12.27 2H3.73L1.12 5.045A.5.5 0 0 0 1 5.37v.255a1.375 1.375 0 0 0 2.75 0 .5.5 0 0 1 1 0M1.5 8.5A.5.5 0 0 1 2 9v6h1v-5a1 1 0 0 1 1-1h3a1 1 0 0 1 1 1v5h6V9a.5.5 0 0 1 1 0v6h.5a.5.5 0 0 1 0 1H.5a.5.5 0 0 1 0-1H1V9a.5.5 0 0 1 .5-.5M4 15h3v-5H4zm5-5a1 1 0 0 1 1-1h2a1 1 0 0 1 1 1v3a1 1 0 0 1-1 1h-2a1 1 0 0 1-1-1zm3 0h-2v3h2z"
+                />
+              </svg>
+            </div>
+          </a>
+        </div>
+      </section>
+
+      <form action="#" method="post" class="contact-us__form">
+        <div class="contact-us__form-field">
+          <label for="full-name" class="contact-us__label"
+            >Full Name</label
+          >
+          <input
+            class="contact-us__input"
+            type="text"
+            id="full-name"
+            name="full__name"
+            placeholder="Your Name"
+            required
+          />
+        </div>
+
+        <div class="contact-us__form-field">
+          <label for="email" class="contact-us__label"
+            >Email Address</label
+          >
+          <input
+            class="contact-us__input"
+            type="email"
+            id="email"
+            name="email"
+            placeholder="Your Email"
+            required
+          />
+        </div>
+
+        <div class="contact-us__form-field">
+          <label for="message" class="contact-us__label">Message</label>
+          <textarea
+            class="contact-us__input contact-us__input--textarea"
+            id="message"
+            name="message"
+            placeholder="Your message"
+            required
+          ></textarea>
+        </div>
+
+        <button class="button submit__button">Send Message</button>
+      </form>
+
+      <!-- Benefits -->
+
+      <section class="benefits">
+        <div class="benefits__item">
+          <div class="benefits__image">
+            <svg
+              width="36px"
+              height="36px"
+              viewBox="0 0 64 64"
+              xmlns="http://www.w3.org/2000/svg"
+              fill="#141718"
+            >
+              <g id="SVGRepo_bgCarrier" stroke-width="0" />
+
+              <g
+                id="SVGRepo_tracerCarrier"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              />
+
+              <g id="SVGRepo_iconCarrier">
+                <defs>
+                  <style>
+                    .cls-1,
+                    .cls-2 {
+                      fill: none;
+                      stroke: #000000;
+                      stroke-linejoin: round;
+                      stroke-width: 2px;
+                    }
+                    .cls-1 {
+                      stroke-linecap: round;
+                    }
+                  </style>
+                </defs>
+                <g id="free-shipping">
+                  <circle class="cls-1" cx="53" cy="17" r="2" />
+                  <circle cx="45.5" cy="23.5" r="1.0691" />
+                  <circle cx="16.5" cy="14.5" r="1.0691" />
+                  <polyline
+                    class="cls-1"
+                    points="53.934 54 61 54 61 43.485 54 40 49.476 31 39.173 31"
+                  />
+                  <line
+                    class="cls-1"
+                    x1="20.6727"
+                    x2="44.1886"
+                    y1="54"
+                    y2="54"
+                  />
+                  <polyline
+                    class="cls-1"
+                    points="10.748 24 3 24 3 54 10.894 54"
+                  />
+                  <polyline class="cls-1" points="39 49 39 24 32.161 24" />
+                  <line class="cls-1" x1="43" x2="45" y1="44" y2="44" />
+                  <circle class="cls-1" cx="49.0802" cy="54.75" r="4.75" />
+                  <circle class="cls-1" cx="15.7406" cy="54.75" r="4.75" />
+                  <polyline class="cls-1" points="26 37 23 37 23 43 26 43" />
+                  <line class="cls-1" x1="26" x2="23" y1="40" y2="40" />
+                  <polyline class="cls-1" points="32 37 29 37 29 43 32 43" />
+                  <line class="cls-1" x1="32" x2="29" y1="40" y2="40" />
+                  <polyline class="cls-1" points="13 37 10 37 10 43" />
+                  <line class="cls-1" x1="13" x2="10" y1="40" y2="40" />
+                  <path
+                    class="cls-1"
+                    d="M16,43V37h2.6439A1.3562,1.3562,0,0,1,20,38.3561v.2878A1.3562,1.3562,0,0,1,18.6439,40H17l3,3"
+                  />
+                  <path
+                    class="cls-1"
+                    d="M31.5561,22.7505,27.623,17.8342a2.0742,2.0742,0,0,0-2.598-.5845,2.001,2.001,0,0,0-.5919,3l1.4,1.75H12.9946a2,2,0,0,0-2,2h0a2,2,0,0,0,2,2H25.8335l-1.317,1.6462a2.1129,2.1129,0,0,0,.2609,2.9407,2,2,0,0,0,2.7787-.3374l4-5A2,2,0,0,0,31.5561,22.7505Z"
+                  />
+                  <line class="cls-1" x1="33" x2="30" y1="7" y2="10" />
+                  <line class="cls-1" x1="30" x2="33" y1="7" y2="10" />
+                  <line class="cls-2" x1="39" x2="54" y1="40" y2="40" />
+                  <line class="cls-2" x1="3" x2="61" y1="50" y2="50" />
+                </g>
+              </g>
+            </svg>
+          </div>
+          <div class="benefits__info">
+            <span class="benefits__title">Free Shiping</span>
+            <span class="benefits__description">Order above $200</span>
+          </div>
+        </div>
+        <div class="benefits__item">
+          <div class="benefits__image">
+            <svg
+              width="36px"
+              height="36px"
+              viewBox="0 0 1024 1024"
+              class="icon"
+              version="1.1"
+              xmlns="http://www.w3.org/2000/svg"
+              fill="#000000"
+            >
+              <g id="SVGRepo_bgCarrier" stroke-width="0" />
+
+              <g
+                id="SVGRepo_tracerCarrier"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              />
+
+              <g id="SVGRepo_iconCarrier">
+                <path
+                  d="M900.64 356.27c0.02-0.13 0.13-0.21 0.14-0.34-0.02 0.13-0.12 0.22-0.14 0.34z"
+                  fill="#FDF5F2"
+                />
+
+                <path
+                  d="M73.15 182.86v146.29h-0.01v73.14h0.01v438.86h402.29V768H146.29V402.29h731.43V544.5h73.14V182.86H73.15z m73.14 146.28V256h731.43v73.14H146.29z"
+                  fill="#141718"
+                />
+
+                <path
+                  d="M182.86 585.14h219.43v73.14H182.86zM822.87 585.14h-76.29l47.29-47.29-51.71-51.71-135.58 135.57 135.57 135.57 51.71-51.71-47.29-47.29h76.29c30.25 0 54.86 24.61 54.86 54.86S853.12 768 822.87 768H548.58v73.14h274.29c70.57 0 128-57.43 128-128s-57.43-128-128-128z"
+                  fill="#141718"
+                />
+              </g>
+            </svg>
+          </div>
+          <div class="benefits__info">
+            <span class="benefits__title">Money-back</span>
+            <span class="benefits__description">30 days guarantee</span>
+          </div>
+        </div>
+        <div class="benefits__item">
+          <div class="benefits__image">
+            <svg
+              viewBox="0 0 48 48"
+              xmlns="http://www.w3.org/2000/svg"
+              xmlns:xlink="http://www.w3.org/1999/xlink"
+              width="36"
+              height="36"
+              fill="none"
+            >
+              <rect
+                id="interface/outline/lock 01"
+                width="36"
+                height="36"
+                x="0.000000"
+                y="0.000000"
+              />
+              <path
+                id="Vector"
+                d="M22.75 32C22.75 32.6904 23.3096 33.25 24 33.25C24.6904 33.25 25.25 32.6904 25.25 32L22.75 32ZM25.25 28C25.25 27.3096 24.6904 26.75 24 26.75C23.3096 26.75 22.75 27.3096 22.75 28L25.25 28ZM16 17.25L32 17.25L32 14.75L16 14.75L16 17.25ZM38.75 24L38.75 36L41.25 36L41.25 24L38.75 24ZM32 42.75L16 42.75L16 45.25L32 45.25L32 42.75ZM9.25 36L9.25 24L6.75 24L6.75 36L9.25 36ZM16 42.75C12.2721 42.75 9.25 39.7279 9.25 36L6.75 36C6.75 41.1086 10.8914 45.25 16 45.25L16 42.75ZM38.75 36C38.75 39.7279 35.7279 42.75 32 42.75L32 45.25C37.1086 45.25 41.25 41.1086 41.25 36L38.75 36ZM32 17.25C35.7279 17.25 38.75 20.2721 38.75 24L41.25 24C41.25 18.8914 37.1086 14.75 32 14.75L32 17.25ZM16 14.75C10.8914 14.75 6.75 18.8914 6.75 24L9.25 24C9.25 20.2721 12.2721 17.25 16 17.25L16 14.75ZM17.25 16L17.25 12L14.75 12L14.75 16L17.25 16ZM30.75 12L30.75 16L33.25 16L33.25 12L30.75 12ZM24 5.25C27.7279 5.25 30.75 8.27208 30.75 12L33.25 12C33.25 6.89137 29.1086 2.75 24 2.75L24 5.25ZM17.25 12C17.25 8.27208 20.2721 5.25 24 5.25L24 2.75C18.8914 2.75 14.75 6.89137 14.75 12L17.25 12ZM25.25 32L25.25 28L22.75 28L22.75 32L25.25 32Z"
+                fill-rule="evenodd"
+                stroke="rgb(20,23,24)"
+                stroke-linecap="round"
+                stroke-width="2.5"
+              />
+            </svg>
+          </div>
+          <div class="benefits__info">
+            <span class="benefits__title">Secure Payments</span>
+            <span class="benefits__description">Secured by Stripe</span>
+          </div>
+        </div>
+        <div class="benefits__item">
+          <div class="benefits__image">
+            <svg
+              width="36"
+              height="36"
+              viewBox="0 0 24 24"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <g id="SVGRepo_bgCarrier" stroke-width="0" />
+
+              <g
+                id="SVGRepo_tracerCarrier"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              />
+
+              <g id="SVGRepo_iconCarrier">
+                <path
+                  d="M3 5.5C3 14.0604 9.93959 21 18.5 21C18.8862 21 19.2691 20.9859 19.6483 20.9581C20.0834 20.9262 20.3009 20.9103 20.499 20.7963C20.663 20.7019 20.8185 20.5345 20.9007 20.364C21 20.1582 21 19.9181 21 19.438V16.6207C21 16.2169 21 16.015 20.9335 15.842C20.8749 15.6891 20.7795 15.553 20.6559 15.4456C20.516 15.324 20.3262 15.255 19.9468 15.117L16.74 13.9509C16.2985 13.7904 16.0777 13.7101 15.8683 13.7237C15.6836 13.7357 15.5059 13.7988 15.3549 13.9058C15.1837 14.0271 15.0629 14.2285 14.8212 14.6314L14 16C11.3501 14.7999 9.2019 12.6489 8 10L9.36863 9.17882C9.77145 8.93713 9.97286 8.81628 10.0942 8.64506C10.2012 8.49408 10.2643 8.31637 10.2763 8.1317C10.2899 7.92227 10.2096 7.70153 10.0491 7.26005L8.88299 4.05321C8.745 3.67376 8.67601 3.48403 8.55442 3.3441C8.44701 3.22049 8.31089 3.12515 8.15802 3.06645C7.98496 3 7.78308 3 7.37932 3H4.56201C4.08188 3 3.84181 3 3.63598 3.09925C3.4655 3.18146 3.29814 3.33701 3.2037 3.50103C3.08968 3.69907 3.07375 3.91662 3.04189 4.35173C3.01413 4.73086 3 5.11378 3 5.5Z"
+                  stroke="#141718"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                />
+              </g>
+            </svg>
+          </div>
+          <div class="benefits__info">
+            <span class="benefits__title">24/7</span>
+            <span class="benefits__description">Phone and Email support</span>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <!-- Footer -->
+
+    <footer class="footer">
+      <div class="footer__header">
+        <a href="#" class="footer__logo"
+          >3legant<span class="logo__dot">.</span></a
+        >
+        <span class="footer__tagline">Gift & Decoration Store</span>
+      </div>
+      <nav class="footer__navigation">
+        <ul class="footer__navigation-list">
+          <li class="footer__navigation-item">
+            <a href="#" class="footer__navigation-link">Home</a>
+          </li>
+          <li class="footer__navigation-item">
+            <a href="shop.html" class="footer__navigation-link">Shop</a>
+          </li>
+          <li class="footer__navigation-item">
+            <a href="#" class="footer__navigation-link">Product</a>
+          </li>
+          <li class="footer__navigation-item">
+            <a href="blog.html" class="footer__navigation-link">Blog</a>
+          </li>
+          <li class="footer__navigation-item">
+            <a href="contacts.html" class="footer__navigation-link">Contact Us</a>
+          </li>
+        </ul>
+      </nav>
+      <div class="footer__social-links">
+        <a
+          href="https://www.instagram.com/"
+          target="_blank"
+          class="footer__social-link"
+        >
+          <svg
+            viewBox="0 0 24 24"
+            xmlns="http://www.w3.org/2000/svg"
+            xmlns:xlink="http://www.w3.org/1999/xlink"
+            width="24.000000"
+            height="24.000000"
+            fill="none"
+          >
+            <rect
+              id="social/outline/instagram"
+              width="24.000000"
+              height="24.000000"
+              x="0.000000"
+              y="0.000000"
+              fill="rgb(255,255,255)"
+              fill-opacity="0"
+            />
+            <rect
+              id="Vector"
+              width="20.000000"
+              height="20.000000"
+              x="2.000000"
+              y="2.000000"
+              rx="4.000000"
+              stroke="rgb(254, 254, 254)"
+              stroke-width="1.5"
+            />
+            <circle
+              id="Vector"
+              cx="18"
+              cy="6"
+              r="1"
+              fill="rgb(254, 254, 254)"
+            />
+            <circle
+              id="Vector"
+              cx="12"
+              cy="12"
+              r="5"
+              stroke="rgb(254, 254, 254)"
+              stroke-width="1.5"
+            />
+          </svg>
+        </a>
+        <a
+          href="https://www.facebook.com//"
+          target="_blank"
+          class="footer__social-link"
+        >
+          <svg
+            viewBox="0 0 24 24"
+            xmlns="http://www.w3.org/2000/svg"
+            xmlns:xlink="http://www.w3.org/1999/xlink"
+            width="24.000000"
+            height="24.000000"
+            fill="none"
+          >
+            <rect
+              id="social/outline/facebook"
+              width="24.000000"
+              height="24.000000"
+              x="0.000000"
+              y="0.000000"
+            />
+            <path
+              id="Vector 2998"
+              d="M18 3L18 7L15 7C14.4477 7 14 7.44772 14 8L14 10L18 10L18 14L14 14L14 21L10 21L10 14L6 14L6 10L10 10L10 8C10 5.23858 12.2386 3 15 3L18 3Z"
+              stroke="rgb(254, 254, 254)"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke-width="1.5"
+            />
+          </svg>
+        </a>
+        <a
+          href="https://www.youtube.com/"
+          target="_blank"
+          class="footer__social-link"
+        >
+          <svg
+            viewBox="0 0 24 24"
+            xmlns="http://www.w3.org/2000/svg"
+            xmlns:xlink="http://www.w3.org/1999/xlink"
+            width="24.000000"
+            height="24.000000"
+            fill="none"
+          >
+            <rect
+              id="social/outline/youtube"
+              width="24.000000"
+              height="24.000000"
+              x="0.000000"
+              y="0.000000"
+            />
+            <rect
+              id="Rectangle 1083"
+              width="20.000000"
+              height="18.000000"
+              x="2.000000"
+              y="3.000000"
+              rx="4.000000"
+              stroke="rgb(254, 254, 254)"
+              stroke-width="1.5"
+            />
+            <path
+              id="Vector 2900"
+              d="M10.4472 8.72361C9.78231 8.39116 9 8.87465 9 9.61803L9 14.382C9 15.1253 9.78231 15.6088 10.4472 15.2764L15.2111 12.8944C15.9482 12.5259 15.9482 11.4741 15.2111 11.1056L10.4472 8.72361Z"
+              stroke="rgb(254, 254, 254)"
+              stroke-linecap="round"
+              stroke-width="1.5"
+            />
+          </svg>
+        </a>
+      </div>
+      <div class="footer__legal">
+        <span class="footer_privacy-policy">Privacy Policy</span>
+        <span class="footer__terms-of-use">Terms of Use</span>
+      </div>
+      <span class="footer__copyright"
+        >Copyright © 2025 3legant. All rights reserved</span
+      >
+    </footer>
+  </body>
+</html>
